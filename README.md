@@ -17,5 +17,5 @@ The code is kinda shit yeah I know, but thats because I am not really a good HTM
 To get started with this project, simply download or clone the repository to your local machine.
 
 ```bash
-git clone https://github.com/yourusername/cloud-hosting-landing-page.git
+git clone https://github.com/vifezdev/hosting-website
 ```
