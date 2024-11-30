@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Hosting</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="preloader">
+    <div class="spinner"></div>
+    </div>    
+  </div>
+  <div class="hero">
+    <nav class="navbar">
+      <div class="logo">CLOUD.</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+      <div class="buttons">
+        <a class="btn" href="#">Game Panel</a>
+        <a class="btn" href="#">Billing Area</a>
+      </div>
+    </nav>
+    <div class="content">
+      <p class="subtitle">TOP–NOTCH GAME HOSTING EXPERIENCE</p>
+      <h1>Power Your World,<br>The Adventure Begins Here.</h1>
+      <a href="#" class="primary-btn">Explore Our Game Hosting Selection</a>
+    </div>
+    <div id="back-to-top">&#8679;</div>    
+  </div>
+
+  <div class="section" id="about-us">
+    <h2>About Us</h2>
+    <p>
+      At CLOUD, we are committed to delivering top-tier game hosting solutions. Our platform is designed for gamers by gamers,
+      ensuring seamless performance and unparalleled reliability.
+    </p>
+  </div>
+
+  <div class="section" id="features">
+    <h2>Our Features</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>99.9% Uptime</h3>
+        <p>Experience unbeatable reliability with our state-of-the-art servers.</p>
+      </div>
+      <div class="feature">
+        <h3>24/7 Support</h3>
+        <p>Our support team is always available to assist you.</p>
+      </div>
+      <div class="feature">
+        <h3>Affordable Plans</h3>
+        <p>Choose from a range of flexible and cost-effective hosting plans.</p>
+      </div>
+      <div class="feature">
+        <h3>Easy-to-Use Dashboard</h3>
+        <p>Manage your servers effortlessly with our intuitive control panel.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="contact-us">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Fill out the form below, and we'll get back to you as soon as possible.</p>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const body = document.querySelector("body");
+      const preloader = document.getElementById("preloader");
+      const sections = document.querySelectorAll(".section");
+
+      window.onload = function () {
+        preloader.style.display = "none";
+        body.classList.add("loaded");
+        animateSections();
+      };
+
+      function animateSections() {
+        sections.forEach(section => {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                section.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          observer.observe(section);
+        });
+      }
+    });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    const body = document.querySelector("body");
+    const preloader = document.getElementById("preloader");
+    const sections = document.querySelectorAll(".section");
+
+    window.onload = function () {
+      preloader.style.display = "none";
+      body.classList.add("loaded");
+      animateSections();
+    };
+
+    function animateSections() {
+      sections.forEach(section => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              section.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        observer.observe(section);
+      });
+    }
+  });
+  </script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column about">
+      <div class="logo">CLOUD.</div>
+      <p class="footer-description">
+        Empowering gamers with seamless, reliable, and affordable game hosting.
+      </p>
+    </div>
+    
+    <div class="footer-column links">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-socials">
+    <a href="#" aria-label="Twitter">
+      <img src="./assets/twitter.png" alt="Twitter">
+    </a>
+    <a href="#" aria-label="Discord">
+      <img src="./assets/discord.png" alt="Discord">
+    </a>
+    <a href="#" aria-label="GitHub">
+      <img src="./assets/github.png" alt="GitHub">
+    </a>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2024 CLOUD Hosting. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
